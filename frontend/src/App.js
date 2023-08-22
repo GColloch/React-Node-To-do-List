@@ -5,9 +5,10 @@ import { Checkbox, Button } from "@material-ui/core";
 import "./App.scss";
 
 class App extends Tasks {
-    state = { tasks: [], currentTask: "" };
+    state = { tasks: [], currentTask: "" }; // gestion d'état pour nos données, comme la liste des tâches et la nouvelle tâche en cours.
+
     render() {
-        const { tasks } = this.state;
+        const { tasks } = this.state; // On regarde ce qui est dans notre état pour les tâches.
         return (
             <div className="App flex">
                 <Paper elevation={3} className="container">

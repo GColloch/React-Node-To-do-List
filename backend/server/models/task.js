@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Définir le schéma de la tâche
+// Défini le modèle de la tâche
 const taskSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -15,7 +15,7 @@ const taskSchema = new mongoose.Schema({
   },
 });
 
-// Créer et exporter le modèle Task
+// Je créer et j'exporte le modèle de la tâche
 const Task = mongoose.model('Task', taskSchema);
 
 module.exports = Task;
