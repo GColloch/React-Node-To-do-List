@@ -2,7 +2,7 @@ import React from "react";
 import Tasks from "./Tasks";
 import { Paper, TextField } from "@material-ui/core";
 import { Checkbox, Button } from "@material-ui/core";
-import "./App.css";
+import "./App.scss";
 
 class App extends Tasks {
     state = { tasks: [], currentTask: "" };
@@ -24,7 +24,7 @@ class App extends Tasks {
                             value={this.state.currentTask}
                             required={true}
                             onChange={this.handleChange}
-                            placeholder="Ajouter une nouvelle Tâche"
+                            placeholder="Ajouter une nouvelle Tâche ⭐"
                         />
                         <Button
                             style={{ height: "40px" }}
@@ -44,7 +44,7 @@ class App extends Tasks {
                                 <Checkbox
                                     checked={task.completed}
                                     onClick={() => this.handleUpdate(task._id)}
-                                    color="primary"
+                                    
                                 />
                                 <div
                                     className={
@@ -57,7 +57,7 @@ class App extends Tasks {
                                 </div>
                                 <Button
                                     onClick={() => this.handleDelete(task._id)}
-                                    color="secondary"
+                                   
                                 >
                                     Supprimer
                                 </Button>
