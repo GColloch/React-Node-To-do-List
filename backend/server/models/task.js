@@ -1,14 +1,21 @@
 const mongoose = require('mongoose');
 
+// Définir le schéma de la tâche
 const taskSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: true, // Le titre est requis
+  },
+  description: {
+    type: String,
   },
   completed: {
     type: Boolean,
-    default: false,
+    default: false, // Par défaut, la tâche n'est pas complétée
   },
 });
 
-module.exports = mongoose.model('Task', taskSchema);
+// Créer et exporter le modèle Task
+const Task = mongoose.model('Task', taskSchema);
+
+module.exports = Task;
